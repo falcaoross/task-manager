@@ -24,7 +24,7 @@ Build Tool: Vite
 
 INSTALLATION STEPS
 1. Clone repository
-   git clone https://github.com/YOUR_USERNAME/laravel-task-manager.git
+   git clone https://github.com/falcaoross/laravel-task-manager.git
    cd laravel-task-manager
 
 2. Install backend dependencies
