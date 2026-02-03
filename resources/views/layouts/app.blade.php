@@ -14,27 +14,33 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased">
-        <div class="min-h-screen bg-gray-100">
+    <body class="antialiased bg-slate-950 text-slate-100">
+        <div class="min-h-screen relative overflow-hidden">
+            <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.25),transparent_55%)]"></div>
+            <div class="pointer-events-none absolute -top-32 right-10 h-72 w-72 rounded-full bg-fuchsia-500/20 blur-3xl"></div>
+            <div class="pointer-events-none absolute bottom-0 left-10 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl"></div>
+
+            <div class="relative">
             @include('layouts.navigation')  
 
             <!-- Page Heading -->
             @isset($header)
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <header class="mx-auto mt-6 max-w-6xl rounded-3xl border border-white/20 bg-white/70 shadow-xl shadow-slate-900/10 backdrop-blur">
+                    <div class="px-6 py-6">
                         {{ $header }}
                     </div>
                 </header>
             @endisset
 
             <!-- Page Content -->
-           <main class="py-6">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+           <main class="py-10">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
                 @include('components.flash')
                 {{ $slot }}
 
             </div>
         </main>
+            </div>
         </div>
     </body>
 </html>
