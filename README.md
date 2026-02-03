@@ -22,7 +22,7 @@ Auth: Laravel Breeze
 Version Control: Git & GitHub
 Build Tool: Vite
 
-INSTALLATION STEPS
+RUNNING LOCALLY
 1. Clone repository
    git clone https://github.com/falcaoross/laravel-task-manager.git
    cd laravel-task-manager
@@ -32,13 +32,19 @@ INSTALLATION STEPS
 
 3. Install frontend dependencies
    npm install
-   npm run dev
 
 4. Environment setup
    cp .env.example .env
    php artisan key:generate
 
 5. Configure database in .env
+   Option A (SQLite, quickest):
+   DB_CONNECTION=sqlite
+   # Create the database file
+   touch database/database.sqlite
+
+   Option B (MySQL):
+   DB_CONNECTION=mysql
    DB_DATABASE=task_manager
    DB_USERNAME=root
    DB_PASSWORD=
@@ -46,5 +52,10 @@ INSTALLATION STEPS
 6. Run migrations
    php artisan migrate
 
-7. Start server
+7. Build assets (choose one)
+   npm run dev
+   # or for production build
+   npm run build
+
+8. Start server
    php artisan serve

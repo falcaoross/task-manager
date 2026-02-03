@@ -18,6 +18,11 @@ class Task extends Model
         'description',
         'is_complete',
         'due_date',
+        'priority',
+        'category',
+        'tags',
+        'estimated_minutes',
+        'reminder_at',
     ];
 
     /**
@@ -26,6 +31,7 @@ class Task extends Model
     protected $casts = [
         'is_complete' => 'boolean',
         'due_date' => 'date',
+        'reminder_at' => 'datetime',
     ];
 
     /**

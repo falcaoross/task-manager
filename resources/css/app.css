@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .glass-card {
+    @apply rounded-3xl border border-white/30 bg-white/80 shadow-2xl shadow-slate-900/10 backdrop-blur;
+  }
+
+  .glass-panel {
+    @apply rounded-2xl border border-white/30 bg-white/80 shadow-xl shadow-slate-900/10 backdrop-blur;
+  }
+
+  .fancy-button {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition;
+  }
+
+  .fancy-button-primary {
+    @apply fancy-button bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg shadow-indigo-500/30 hover:from-indigo-400 hover:via-purple-400 hover:to-pink-400;
+  }
+
+  .fancy-button-ghost {
+    @apply fancy-button border border-white/40 bg-white/70 text-slate-700 hover:text-slate-900;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold;
+  }
+
+  .badge-low {
+    @apply badge bg-emerald-50 text-emerald-700;
+  }
+
+  .badge-medium {
+    @apply badge bg-sky-50 text-sky-700;
+  }
+
+  .badge-high {
+    @apply badge bg-amber-50 text-amber-700;
+  }
+
+  .badge-urgent {
+    @apply badge bg-rose-50 text-rose-700;
+  }
+
+  .badge-complete {
+    @apply badge bg-emerald-100 text-emerald-800;
+  }
+
+  .badge-pending {
+    @apply badge bg-amber-100 text-amber-800;
+  }
+}
